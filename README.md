@@ -5,7 +5,7 @@
 To quickly start all the things just do this:
 ```bash
 kubectl apply \
-  --filename https://raw.githubusercontent.com/giantswarm/kubernetes-prometheus/master/manifests-all.yaml
+  --filename https://raw.githubusercontent.com/zeroc0d3/kubernetes-prometheus/master/manifests-all.yaml
 ```
 
 This will create the namespace `monitoring` and bring up all components in there.
