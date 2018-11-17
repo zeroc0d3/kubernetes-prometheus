@@ -1,0 +1,25 @@
+## GRAFANA
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: monitoring
+  name: monitoring-grafana
+spec:
+  rules:
+  - host: grafana.zeroc0d3lab.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: grafana
+          servicePort: 3000
+          targetPort: 3000
+  selector:
+    app: grafana
+  ports:
+  - name: http
+    protocol: TCP
+    port: 3001
+    targetPort: 3000
+  externalIPs:
+  - [YOUR_EXTERNAL_GRAFANA_IP]
